@@ -17,3 +17,6 @@
 
 
 }
+body{
+	background-color: var(--secondaryColor);
+}

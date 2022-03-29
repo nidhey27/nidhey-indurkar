@@ -1,6 +1,7 @@
 console.log('Its working')
 
 let theme = localStorage.getItem('theme')
+console.log(theme)
 
 if(theme == null){
 	setTheme('light')
