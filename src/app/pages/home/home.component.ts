@@ -56,7 +56,7 @@ export class HomeComponent {
     {
       name: "Prometheus",
       description: "Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using a HTTP pull model, with flexible queries and real-time alerting.",
-      thumbnail: "../../../assets/oss/prometheus.png",
+      thumbnail: "assets/oss/prometheus.png",
       prs: [
         "https://github.com/prometheus/prometheus/pull/12096",
         "https://github.com/prometheus/prometheus/pull/12031",

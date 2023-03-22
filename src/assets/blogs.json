@@ -15,24 +15,24 @@
       "id": 3,
       "title": "An Escape: From your Misery Inclination",
       "description": "Hey Guys, Today I have an engaging story to share with you all. Perhaps some of you have heard about this story in ...",
-      "thumbnail": "../../../assets/blogs/blog1.jpg"
+      "thumbnail": "assets/blogs/blog1.jpg"
     },
     {
       "id": 4,
       "title": "Can Money afford Happiness?",
       "description": "Hey guys! In this blog, I would like to talk about the significant connection between happiness and money. How many of you think that happiness...",
-      "thumbnail": "../../../assets/blogs/blog3.jpg"
+      "thumbnail": "assets/blogs/blog3.jpg"
     },
     {
       "id": 5,
       "title": "Who decides what to live by? Why do people live by others' templates? Choosing unconventional ways of living might cause short-term discomfort, but following a ...",
       "description": "",
-      "thumbnail": "../../../assets/blogs/blog5.png"
+      "thumbnail": "assets/blogs/blog5.png"
     },
     {
       "id": 6,
       "title": "Level Up Your Software Engineering Career: 6 Habits to Land a High-Paying Job",
       "description": "You wake up in the morning, reach for your phone, and with a single ...",
-      "thumbnail": "../../../assets/blogs/blog6.jpg"
+      "thumbnail": "assets/blogs/blog6.jpg"
     }
   ]
