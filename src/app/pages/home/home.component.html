@@ -2,6 +2,7 @@
     <div class="main-container">
         <div class="greeting-wrapper" data-aos="zoom-in-down">
             <h1>Hi, I'm Nidhey Indurkar</h1>
+
         </div>
 
         <div class="intro-wrapper">
@@ -44,10 +45,17 @@
                         <div id="corner-tl" class="corner"></div>
                         <div id="corner-tr" class="corner"></div>
                         <h3>What I Do</h3>
-                        <p>
-                            I'm a Software engineer with a demonstrated history of working
-                            in the information technology and services industry.
+                        <!-- <b>Breaking things until they work.</b > -->
+                        <p>{{whatIDo[randomIndex]}}</p>
+                        <!-- <p>
+                            I'm a Software Engineer who likes to code, drink coffee, and occasionally argue with my computer screen.
                         </p>
+                        <p>
+                            I'm a software engineer who's constantly trying to break things, but don't worry - I always make sure they work again before anyone notices!
+                        </p>
+                        <p>
+                            I'm a software engineer who's not afraid to break a few eggs to make an omelette... or in my case, break a few lines of code to make an awesome app!
+                        </p> -->
                         <div id="corner-br" class="corner"></div>
                         <div id="corner-bl" class="corner"></div>
                     </div>
@@ -117,19 +125,19 @@
     <div class="main-container">
         <h3 style="text-align: center">Exploring the World Through My Lens</h3>
 
-        <div class="post-wrapper">
+        <div  class="post-wrapper">
 
-            <div *ngFor="let blog of blogs">
+            <div *ngFor="let blog of blogs; let i = index">
                 <div class="post" data-aos="zoom-in-up">
-                    <img class="thumbnail" src="{{blog.thumbnail}}" />
+                    <img class="thumbnail" src="{{blog?.thumbnail}}" />
                     <div class="post-preview">
                         <h6 class="post-title">
-                            {{blog.title}}
+                            {{blog?.title}}
                         </h6>
                         <p class="post-intro">
-                            {{blog.description}}
+                            {{blog?.description}}
                         </p>
-                        <a href="Level Up Your Software Engineering Career.html">Read More</a>
+                        <a (click)="navigate(blog.id)">Read More</a>
                     </div>
                 </div>
             </div>
@@ -160,3 +168,4 @@
 
     </div>
 </section>
+<app-footer></app-footer>

@@ -1,11 +1,33 @@
-import { Component } from '@angular/core';
-
+import { Component, Renderer2 } from '@angular/core';
+import blogs from '../../../assets/blogs.json'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  blogs: any = blogs
+  constructor(private renderer: Renderer2, private _router: Router) {
+    let theme = localStorage.getItem('theme')
+
+    const link = this.renderer.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'src/app/stylesheets/blue.css';
+    this.renderer.appendChild(document.head, link);
+
+    
+  }
+
+  whatIDo = [
+    "I'm a software engineer who takes the 'break it till you make it' approach - if it's not working, you can bet I'll find a way to break it even more until it miraculously starts working again!",
+    "I'm a Software Engineer who likes to code, drink coffee, and occasionally argue with my computer screen.",
+    "I'm a software engineer who's constantly trying to break things, but don't worry - I always make sure they work again before anyone notices!",
+    "I'm a software engineer who's not afraid to break a few eggs to make an omelette... or in my case, break a few lines of code to make an awesome app!"
+  ]
+
+  randomIndex = Math.floor(Math.random() * this.whatIDo.length);
 
   techinicalSkills = [
     "Docker",
@@ -27,39 +49,8 @@ export class HomeComponent {
     "MySQL,MongoDB",
     "PHP",
   ]
-
-  blogs = [
-    {
-      title: "Earn while Learning: The process of removing “L” from Learning!",
-      description: "Let me tell you: I am not the only person to achieve this milestone, but some of my friends have landed a job that is ...",
-      thumbnail: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    },
-    {
-      title: "The 3 Habits: “Foundation of Success”",
-      description: "The phrase anticipates how to sell yourself. Oh! What I just said would sound disgusting, but it's a fact...",
-      thumbnail: "https://www.success.com/wp-content/uploads/2020/01/Habits_WebThumbnails.png"
-    },
-    {
-      title: "An Escape: From your Misery Inclination",
-      description: "Hey Guys, Today I have an engaging story to share with you all. Perhaps some of you have heard about this story in ...",
-      thumbnail: "../../../assets/blogs/blog1.jpg"
-    },
-    {
-      title: "Can Money afford Happiness?",
-      description: "Hey guys! In this blog, I would like to talk about the significant connection between happiness and money. How many of you think that happiness...",
-      thumbnail: "../../../assets/blogs/blog3.jpg"
-    },
-    {
-      title: "Who decides what to live by? Why do people live by others' templates? Choosing unconventional ways of living might cause short-term discomfort, but following a ...",
-      description: "",
-      thumbnail: "../../../assets/blogs/blog5.png"
-    },
-    {
-      title: "Level Up Your Software Engineering Career: 6 Habits to Land a High-Paying Job",
-      description: "You wake up in the morning, reach for your phone, and with a single ...",
-      thumbnail: "../../../assets/blogs/blog6.jpg"
-    },
-  ]
+  
+  
 
   opensourceContributions = [
     {
@@ -70,7 +61,15 @@ export class HomeComponent {
         "https://github.com/prometheus/prometheus/pull/12096",
         "https://github.com/prometheus/prometheus/pull/12031",
       ]
-      
+
     }
   ]
+
+  ngOnInit(){
+    this.blogs = this.blogs.reverse()
+  }
+
+  navigate(id: number) {
+    this._router.navigateByUrl('/blogs/'+ btoa(id.toString()))
+  }
 }

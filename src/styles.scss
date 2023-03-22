@@ -217,7 +217,8 @@ h6 {
 }
 
 .theme-dot:hover {
-	border-width: 5px;
+	// border-width: 5px;
+	transform: scale(1.2);
 }
 
 #light-mode {
