@@ -22,7 +22,7 @@
             </div>
 
             <div class="left-column">
-                <img data-aos="zoom-in-up" id="profile_pic" src="assets/profile/profile_1.jpg" />
+                <img data-aos="zoom-in-up" alt="profile" id="profile_pic" src="assets/profile/profile_1.jpg" />
                 <h5 style="text-align: center; line-height: 0">
                     Personalize Theme
                 </h5>
@@ -109,7 +109,7 @@
             </div>
 
             <div class="social-links" data-aos="zoom-in-right">
-                <img id="social_img" src="assets/profile/cover_1.jpg" />
+                <img alt="cover" id="social_img" src="assets/profile/cover_1.jpg" />
                 <h3>Find me on Instagram & LinkedIn</h3>
 
                 <a target="_blank" href="https://www.instagram.com/nyctophiliac_nid/">Instagram: @nyctophiliac_nid</a>
@@ -129,7 +129,7 @@
 
             <div *ngFor="let blog of blogs; let i = index">
                 <div class="post" data-aos="zoom-in-up">
-                    <img class="thumbnail" src="{{blog?.thumbnail}}" />
+                    <img alt="{{blog?.title}}" class="thumbnail" src="{{blog?.thumbnail}}" />
                     <div class="post-preview">
                         <h6 class="post-title">
                             {{blog?.title}}
@@ -152,7 +152,7 @@
         <div class="post-wrapper">
             <div *ngFor="let o of opensourceContributions">
                 <div class="post" data-aos="zoom-in-up">
-                    <img class="thumbnail" src="{{o.thumbnail}}" />
+                    <img alt="{{o.name}}" class="thumbnail" src="{{o.thumbnail}}" />
                     <div class="post-preview">
                         <h6 class="post-title">
                             {{o.name}}
