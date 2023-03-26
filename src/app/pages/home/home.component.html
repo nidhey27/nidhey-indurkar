@@ -144,8 +144,30 @@
         </div>
     </div>
 </section>
+<section class="s">
+    <div class="main-container">
 
-<section class="s2">
+        <h4 style="text-align: center">Pursuing My Passions: A Catalog of My Personal Projects</h4>
+        <div class="post-wrapper">
+            <div *ngFor="let o of personalProjects">
+                <div class="post" data-aos="zoom-in-up">
+                    <img alt="{{o.name}}" class="thumbnail" src="{{o.thumbnail}}" />
+                    <div class="post-preview">
+                        <h6 class="post-title">
+                            {{o.name}}
+                        </h6>
+                        <p class="post-intro">
+                            {{o.description}}
+                        </p>
+                        <a routerLink="/be-safe">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="s1">
     <div class="main-container">
 
         <h4 style="text-align: center">Open Doors to Collaboration: My Open-Source Contributions</h4>
@@ -168,4 +190,6 @@
 
     </div>
 </section>
+
+<!--  -->
 <app-footer></app-footer>

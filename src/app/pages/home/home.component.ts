@@ -65,6 +65,14 @@ export class HomeComponent {
     }
   ]
 
+  personalProjects = [
+    {
+      name: "BeSafe v1.0.0",
+      description: "When it comes to safety apps for women, 'Be Safe' is one of the best options. It was of the utmost importance to develop the app with a focus on personal safety. The application comes with all the essential features, including GPS tracking, emergency numbers, and directions to safe areas.",
+      thumbnail: "assets/projects/besafe.png",
+    }
+  ]
+
   ngOnInit(){
     this.blogs = this.blogs.reverse()
   }
