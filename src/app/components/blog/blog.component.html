@@ -1193,4 +1193,205 @@
     </div>
 
 </div>
+
+<div *ngIf="blogId == 'tech-1'" class="main-container">
+    <br>
+
+    <div class="img-container">
+        <img src="../../../assets/blogs/blog1.jpg" />
+    </div>
+
+    <h3>Real-Time Communication Made Easy: A Step-by-Step Guide to Creating <i>WebSockets</i> in Go</h3>
+
+    <p>
+        <b>WebSockets</b> are a popular communication protocol for real-time data exchange between clients and servers.
+        Go is a
+        programming language designed for efficient network programming, and it provides robust support for
+        <b>WebSockets</b>.
+    </p>
+    <p>
+        In this article, we will explore how to create <b>WebSockets</b> in Go Lang, including setting up a WebSocket
+        server,
+        handling incoming WebSocket connections, sending and receiving messages, and closing the WebSocket connection.
+    </p>
+
+    <h5>What are WebSockets?</h5>
+    <p>
+        WebSockets are a protocol that allows for real-time, bidirectional communication between a client and a server.
+        Unlike traditional HTTP requests, which are stateless, WebSockets maintain a persistent connection between the
+        client and server, enabling data to be transmitted in real-time without the overhead of repeatedly opening and
+        closing connections.
+    </p>
+
+    <p>
+        WebSockets are used in a wide range of applications, including <b>
+            chat applications, gaming platforms, financial
+            trading systems, and more.
+        </b>
+    </p>
+
+    <h5>
+        Setting up a WebSocket server in Go
+    </h5>
+
+    <p>
+        To set up a WebSocket server in Go, we will use the built-in net/http package. The first step is to define an
+        HTTP handler function to handle incoming WebSocket requests. Here's an example:
+
+
+    </p>
+    <pre>
+        <code>
+            func handleWebSocket(w http.ResponseWriter, r *http.Request) {{'{'}}
+                // TODO: handle WebSocket request
+            {{'}'}}
+        </code>
+    </pre>
+
+    <p>
+        In the above code, we define a function <b>handleWebSocket</b> that takes two arguments, <b>w</b> and <b>r</b>,
+        which represent the
+        <b>ResponseWriter</b> and <b>Request</b> objects respectively. These objects are provided by the <b>net/http</b>
+        package and are used
+        to handle HTTP requests.
+    </p>
+
+    <p>
+        To handle WebSocket requests, we need to upgrade the HTTP connection to a WebSocket connection. We can do this
+        by calling the Upgrader.Upgrade() function provided by the github.com/gorilla/websocket package. This function
+        takes an http.ResponseWriter, an http.Request, and an optional http.Header object, and returns a *websocket.Conn
+        object, which represents the WebSocket connection.
+
+
+    </p>
+
+</div>
+
+<div *ngIf="blogId == '7'" class="main-container">
+    <br>
+
+    <div class="img-container">
+        <img src="../../../assets/blogs/power.jpg" />
+    </div>
+
+    <h3>Mastering the Art of Power: A Comprehensive Review of <i>'The 48 Laws of Power'</i> by Robert Greene</h3>
+
+    <p>
+        <b>"The 48 Laws of Power"</b> is a book that has gained significant attention since its publication in 1998. The
+        book
+        is a guide to the strategies and tactics used by powerful people throughout history to gain and maintain power.
+        Robert Greene, the author of the book, draws on examples from history, literature, and contemporary politics to
+        illustrate his points.
+    </p>
+
+    <p>
+        The book is divided into 48 chapters, each focusing on a different "law of power." These laws range from "Never
+        outshine the master" to "Crush your enemy totally." The laws are presented as concise and actionable advice for
+        those seeking to gain power and influence.
+    </p>
+
+    <p>
+        Greene's writing style is engaging and accessible, with examples drawn from a variety of sources. The book is
+        not a dry academic treatise, but rather a lively and entertaining exploration of the strategies and tactics used
+        by the powerful throughout history.
+    </p>
+
+    <b>
+        The 48 Laws of Power can be divided into six broad categories:
+    </b>
+    <div>
+        <ol>
+            <li>
+                <b>Laws of Self-Preservation -</b>
+                These laws focus on protecting oneself from harm and ensuring one's own survival. Examples include
+                "Never put too much trust in friends, learn how to use enemies," and "Conceal your intentions."
+            </li>
+
+            <li>
+                <b>
+                    Laws of Manipulation -
+                </b> These laws are about influencing others to do what you want, without them
+                realizing that they are being manipulated. Examples include "Make other people come to you, use bait if
+                necessary" and "Say less than necessary."
+            </li>
+
+            <li>
+                <b>Laws of Leadership -</b>
+                These laws are about leading others effectively. Examples include "Never appear too perfect" and "Be
+                wary of friends, they will betray you more quickly than enemies."
+            </li>
+            <li>
+                <b>Laws of Ascension - </b>
+                These laws are about rising to a position of power and influence. Examples include
+                "Get others to do the work for you, but always take the credit" and "Play a sucker to catch a sucker,
+                seem dumber than your mark."
+            </li>
+            <li>
+                <b>Laws of War - </b>
+                These laws are about how to succeed in conflict, whether it is a literal battle or a more
+                metaphorical struggle for power. Examples include "Win through your actions, never through argument" and
+                "Plan all the way to the end."
+            </li>
+            <li>
+                <b> Laws of Nature - </b>
+                These laws are about the fundamental principles of human behavior and how to use them
+                to your advantage. Examples include "So much depends on reputation, guard it with your life" and "Create
+                compelling spectacles."
+            </li>
+        </ol>
+        <p>
+            The book does not advocate the use of these laws as a moral imperative, but rather presents them as a guide
+            for those who wish to understand how power works and how it can be used or misused.
+        </p>
+        <b>
+            Critiques of the Book
+        </b>
+        <p>
+            Some readers have criticized "The 48 Laws of Power" as cynical or Machiavellian. However, Greene's approach
+            is not necessarily advocating for the use of these tactics, but rather providing a guide for those who wish
+            to understand how power works and how it can be used or misused.
+
+
+        </p>
+        <p>
+            One criticism of the book is that it can be seen as overly simplistic. The laws are presented as absolutes,
+            without much consideration of the complexities and nuances of real-world situations. In addition, the focus
+            on individual power can be seen as neglecting the role of collective action and social movements in creating
+            change.
+        </p>
+        <p>
+            Another criticism of the book is that it can lead to a toxic culture of manipulation and dishonesty, where
+            people see each other as potential enemies to be conquered rather than as collaborators or partners.
+            However, this is more a reflection of how the laws are interpreted and applied rather than an inherent flaw
+            in the book itself.
+        </p>
+
+        <p>
+            <i>
+                If you want
+                to read about these 48 laws and <b>gain insight into the strategies and tactics</b> used by the powerful
+                throughout
+                history, the book is widely available through various online retailers or your local bookstore.
+            </i>
+        </p>
+        <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+            style="width:100%;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
+            src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=findsco-21&language=en_IN&marketplace=amazon&region=IN&placement=1861974043&asins=1861974043&linkId=9c516ae43c59b1b90ab762b7a050e7b9&show_border=true&link_opens_in_new_window=true"></iframe>
+    </div>
+
+    <div>
+        <p class="text-align-end">
+            Thank you for reading and supporting!<br>
+            Be active, be happy, be safe!
+            <br>&amp; Keep Hustling.<br>
+            <i>@ Nidhey Indurkar</i>
+            <br>
+
+            <!-- Edited by ~
+            <a target="_blank"
+                href="https://www.linkedin.com/in/aparna-sharma-5b78971b5/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADIke5sBjsYn1NzpBWwAbZn5gTn-MuL6TNc">Aparna
+                Sharma</a> -->
+        </p>
+    </div>
+</div>
 <app-footer></app-footer>
